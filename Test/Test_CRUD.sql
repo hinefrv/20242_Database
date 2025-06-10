@@ -1,13 +1,25 @@
 -- CRUD_sach
 select * from sach;
 
-select f_them_sach(10, '7 Thói quen hiệu quả', 'NXB Tổng hợp', 2018, 'Kỹ năng', 40, 5, 150000, 'Tham khảo', 'Ngừng bán');
+select f_them_sach('100 Thói quen hiệu quả', 'Tôi dại dột', 'NXB Tổng hợp', 2018, 'Kỹ năng', 40, 5, 150000, 'Tham khảo', 'Ngừng bán');
 
 select f_cap_nhat_sach(9, '7 Thói quen hiệu quả', 'NXB Tổng hợp', 2018, 'Kỹ năng', 40, 5, 150000, 'Để bán', 'Đang bán');
 
 select * from f_lay_thong_tin_sach(1);
 
 select * from f_lay_danh_sach_sach();
+
+select * from f_lay_danh_sach_sach_theo_trang_thai('');
+
+select * from f_lay_danh_sach_sach_theo_trang_thai('Đang bán');
+
+select * from f_lay_danh_sach_sach_theo_trang_thai('Ngừng bán');
+
+select * from f_lay_danh_sach_sach_theo_phan_loai('');
+
+select * from f_lay_danh_sach_sach_theo_phan_loai('Tham khảo');
+
+select * from f_lay_danh_sach_sach_theo_phan_loai('Để bán');
 
 select f_cap_nhat_trang_thai_sach(9, 'Ngừng bán');
 
@@ -33,6 +45,14 @@ select * from f_lay_thong_tin_do_uong(3);
 
 select * from f_lay_danh_sach_do_uong();
 
+select * from f_lay_danh_sach_do_uong('Đang bán');
+
+select * from f_lay_danh_sach_do_uong('Tạm hết');
+
+select * from f_lay_danh_sach_do_uong('Ngừng bán');
+
+select * from f_lay_danh_sach_do_uong('');
+
 -- CRUD_nguyen_lieu
 select * from nguyen_lieu;
 
@@ -43,6 +63,12 @@ select f_cap_nhat_nguyen_lieu(4, 'Chanh', 40, 'quả', 50);
 select * from f_lay_thong_tin_nguyen_lieu(4);
 
 select * from f_lay_danh_sach_nguyen_lieu();
+
+select * from f_lay_danh_sach_nguyen_lieu('Cảnh báo');
+
+select * from f_lay_danh_sach_nguyen_lieu('Đủ dùng');
+
+select * from f_lay_danh_sach_nguyen_lieu('');
 
 -- CRUD_cong_thuc
 select * from cong_thuc;
